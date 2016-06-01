@@ -1,0 +1,16 @@
+# TODO: sync with path.zsh
+GOPATH=~/gocode
+
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        $GOPATH/bin/peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}

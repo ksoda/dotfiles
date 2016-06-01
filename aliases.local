@@ -1,0 +1,7 @@
+alias -g P='| peco'
+alias d=docker
+alias feat-base='git merge-base HEAD develop'
+alias g=git
+alias git='noglob git'
+alias rl='bin/rails'
+alias trim-feat='git rebase -i $(feat-base)'

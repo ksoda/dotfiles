@@ -1,0 +1,8 @@
+alias apt-ug='sudo apt-get update -qq && sudo apt-get -y upgrade'
+alias loxmodmap='xmodmap ~/.Xmodmap'
+alias n-charge-lv=battery-set-normal-charge-levels
+alias notify='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias open=xdg-open
+alias pacoi="paco -lD 'make install'"
+alias pbcopy='xclip -selection clipboard -in'
+alias scs-area='gnome-screenshot -ac'
