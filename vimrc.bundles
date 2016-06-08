@@ -33,6 +33,7 @@ call dein#add('tpope/vim-surround')
 call dein#add('xolox/vim-misc')
 call dein#add('xolox/vim-session')
 call dein#add('tpope/vim-rails')
+call dein#add('vim-scripts/taglist.vim')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
