@@ -10,10 +10,5 @@ export PYTHONSTARTUP=~/.pythonrc
 
 eval "$(rbenv init -)"
 #eval "$(direnv hook zsh)"
-eval "$(opam config env)"
 tmux source ~/.tmux.conf
 
-[ -f ~/.tnsrc ] && source ~/.tnsrc
-
-if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
-  . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

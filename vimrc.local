@@ -36,6 +36,9 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
+set cursorline
+highlight ColorColumn ctermbg=0 guibg=#2c2d27
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
