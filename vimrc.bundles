@@ -29,7 +29,8 @@ call dein#add('bogado/file-line')
 call dein#add('tpope/vim-surround')
 call dein#add('xolox/vim-misc')
 call dein#add('xolox/vim-session')
-
+call dein#add('Shougo/vimproc.vim')
+call dein#add('rhysd/github-complete.vim')
 
 " Required:
 call dein#end()
