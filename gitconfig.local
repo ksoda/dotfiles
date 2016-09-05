@@ -10,6 +10,7 @@
 	cln = clean -di
 	feat = flow feature start
 	ri = rebase -i
+	current-branch = rev-parse --abbrev-ref HEAD
 [push]
 	default = simple
 [tig "bind"]
