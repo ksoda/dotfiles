@@ -1,0 +1,8 @@
+Plug 'Shougo/neocomplete'
+Plug 'airblade/vim-gitgutter'
+Plug 'bogado/file-line'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'jiangmiao/auto-pairs'
+Plug 'majutsushi/tagbar'
+Plug 'rhysd/github-complete.vim'
+Plug 'sheerun/vim-polyglot'
