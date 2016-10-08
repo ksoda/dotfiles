@@ -1,11 +1,6 @@
-"curl -o ~/.vimrc https://raw.githubusercontent.com/thoughtbot/dotfiles/master/vimrc
-
-"*****************************************************************************
 "" Basic Setup
 "*****************************************************************************"
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+set softtabstop=-1
 
 "" Enable hidden buffers
 set hidden
@@ -16,112 +11,60 @@ set incsearch
 set ignorecase
 set smartcase
 
-" session management
-let g:session_directory = "~/.vim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 
-"*****************************************************************************
+
 "" Visual Settings
 "*****************************************************************************
 set relativenumber
+
 set mouse=a
 set ttymouse=xterm2
-set showtabline=2
-"" Use modeline overrides
-set modeline
-set modelines=10
 
-set title
-set titleold="Terminal"
-set titlestring=%F
+set showtabline=2
 
 set cursorline
 highlight ColorColumn ctermbg=0 guibg=#2c2d27
 
-"*****************************************************************************
+" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+else
+  set clipboard=unnamed
+endif
+
+
 "" Abbreviations
 "*****************************************************************************
 abbrev pry binding.pry
-"" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 25
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <c-k><c-b> :NERDTreeTabsToggle<CR>
-nnoremap <leader>to :TagbarOpenAutoClose<CR>
 
 
-"*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
 autocmd BufWritePre * :%s/\s\+$//e
 
-"*****************************************************************************
+
 "" Mappings
 "*****************************************************************************
 "" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
-
-"" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
-
-"" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-"" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-"" ctrlp.vim
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
-let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
-let g:ctrlp_use_caching = 1
-
-" The Silver Searcher
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-noremap <leader>b :CtrlPBuffer<CR>
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-" Copy/Paste/Cut
-set clipboard=unnamed
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
-
-"" Buffer nav
-noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
 
-"" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
+"" CtrlP
+noremap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = '<leader>p'
 
-" Neocomplete
+"" Tagbar
+nnoremap <leader>to :TagbarOpenAutoClose<CR>
+nmap <silent> <leader><F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+"" Neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_select = 1
 
