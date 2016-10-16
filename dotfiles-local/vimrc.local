@@ -95,3 +95,10 @@ function! s:select_candidate()
   return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 
+"" Haskell
+augroup ghcmodcheck
+  autocmd!
+  autocmd BufWritePost *.hs GhcModCheckAsync
+augroup END
+nnoremap <leader>gt :GhcModType<CR>
+
