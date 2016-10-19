@@ -27,6 +27,18 @@ set scrolloff=5
 set cursorline
 highlight ColorColumn ctermbg=0 guibg=#2c2d27
 
+function! s:default_statusline()
+  highlight StatusLine term=reverse ctermfg=2 gui=bold,reverse
+endfunction
+" now set it up to change the status line based on mode
+if version >= 700
+  autocmd InsertEnter *
+      \ highlight StatusLine term=reverse ctermfg=7 gui=undercurl guisp=Magenta
+  autocmd InsertLeave * call s:default_statusline()
+  call s:default_statusline()
+endif
+
+
 let g:netrw_preview=1           " open previews vertically
 let g:netrw_liststyle=3         " tree
 let g:netrw_browse_split=4      " act like open previous window
