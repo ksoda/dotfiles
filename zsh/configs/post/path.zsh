@@ -1,7 +1,7 @@
 HASKELLPATH=~/.local
-#PEBBLEPATH=~/pebble-dev/PebbleSDK-3.3/bin
-ANDROIDPATH=/usr/local/android-studio/bin
+PEBBLEPATH=~/pebble-dev/pebble-sdk-4.5-linux64
+ANDROIDPATH=/usr/local/android-studio
 RBENVPATH=~/.rbenv
 export ANDROID_HOME=~/Android/Sdk
-export GOPATH=~/gocode
-export PATH="$RBENVPATH/bin:$GOPATH/bin:$HASKELLPATH/bin:$ANDROIDPATH:$PATH"
+export GOPATH=~/go
+export PATH="$PEBBLEPATH/bin:$RBENVPATH/bin:$GOPATH/bin:$HASKELLPATH/bin:$PATH"
