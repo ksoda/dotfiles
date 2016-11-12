@@ -1,13 +1,14 @@
+Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Shougo/neocomplete'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'bogado/file-line'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
 Plug 'rhysd/github-complete.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'thinca/vim-ref'
-Plug 'eagletmt/ghcmod-vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'eagletmt/neco-ghc'
 
