@@ -6,3 +6,5 @@ alias open=xdg-open
 alias pacoi="paco -lD 'make install'"
 alias pbcopy='xclip -selection clipboard'
 alias scs-area='gnome-screenshot -ac'
+alias stack='stack --nix'
+
