@@ -23,3 +23,8 @@
 	tool = meld
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[gpg]
+	program = gpg
+[user]
+	signingkey = BE9F310F9176B778F42C3AE8E32A128FB0504CB7
+
