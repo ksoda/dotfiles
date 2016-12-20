@@ -13,6 +13,10 @@
 	current-branch = rev-parse --abbrev-ref HEAD
 [push]
 	default = simple
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [tig "bind"]
 	diff = F ?!git commit --fixup %(commit)
 [diff]
@@ -27,4 +31,3 @@
 	program = gpg
 [user]
 	signingkey = BE9F310F9176B778F42C3AE8E32A128FB0504CB7
-
