@@ -7,5 +7,4 @@ alias pacoi="paco -lD 'make install'"
 alias pbcopy='xclip -selection clipboard'
 alias scs-area='gnome-screenshot -ac'
 alias s=stack
-alias stack='stack --nix'
 
