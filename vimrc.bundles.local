@@ -8,7 +8,5 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
-Plug 'rhysd/github-complete.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'thinca/vim-ref'
 
