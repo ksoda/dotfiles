@@ -16,4 +16,5 @@ RBENVPATH=~/.rbenv
 export GOPATH=~/go
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$RBENVPATH/bin:$GOPATH/bin:$HASKELLPATH/bin:$PATH"
+export PATH="$PYENV_ROOT/versions/miniconda-latest/bin/:$PATH"
 eval "$(pyenv init -)"
