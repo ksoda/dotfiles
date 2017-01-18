@@ -7,6 +7,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-emoji'
 Plug 'majutsushi/tagbar'
 Plug 'sheerun/vim-polyglot'
 

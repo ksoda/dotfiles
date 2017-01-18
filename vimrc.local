@@ -82,6 +82,9 @@ nnoremap <leader>to :TagbarOpenAutoClose<CR>
 nnoremap <leader>tt :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
+"" Emoji
+set completefunc=emoji#complete
+
 "" Neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_select = 1
