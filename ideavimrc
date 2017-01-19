@@ -1,2 +1,4 @@
 set clipboard=unnamed
 set surround
+set number
+set relativenumber
