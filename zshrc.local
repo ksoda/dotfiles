@@ -1,14 +1,6 @@
 [[ -f ~/.aliases.ubuntu ]] && source ~/.aliases.ubuntu
-#export ANDROID_HOME=~/Android/Sdk/
-export PYTHONSTARTUP=~/.pythonrc
-
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &&
   source ~/.autojump/etc/profile.d/autojump.sh
 
-# added by travis gem
-#[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
-eval "$(rbenv init -)"
-#eval "$(direnv hook zsh)"
 tmux source ~/.tmux.conf
 
