@@ -11,14 +11,13 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 fi
 
 HASKELLPATH="$HOME/.local"
-RBENVPATH=~/.rbenv
+RBENVPATH="$HOME/.rbenv"
+CONDA_PATH="$HOME/miniconda3"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PYTHONSTARTUP="$HOME/.pythonrc"
-export GOPATH=~/go
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$RBENVPATH/bin:$GOPATH/bin:$HASKELLPATH/bin:$PATH"
-export PATH="$PYENV_ROOT/versions/miniconda-latest/bin/:$PATH"
-eval "$(pyenv init -)"
+export GOPATH="$HOME/go"
+export PATH="$CONDA_PATH/bin:$RBENVPATH/bin:$GOPATH/bin:$HASKELLPATH/bin:$PATH"
+
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 
