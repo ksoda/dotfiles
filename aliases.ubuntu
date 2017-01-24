@@ -7,6 +7,6 @@ alias notify='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || ech
 alias open=xdg-open
 alias pacoi="paco -lD 'make install'"
 alias pbcopy='xclip -selection clipboard'
-alias runhaskell='stack runhaskell --'
+alias runghc='stack runghc --'
 alias scs-area='gnome-screenshot -ac'
 alias s=stack
