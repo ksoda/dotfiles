@@ -1,4 +1,7 @@
 set main-view = id date author commit-title:graph=yes,refs=yes
 set line-graphics = utf-8
-# set diff-highlight = true
+set diff-highlight = true
 
+bind diff F ?!git commit --fixup %(commit)
+bind diff S ?!git commit --squash %(commit)
+bind generic 9 !@sh -c "echo -n %(commit) | pbcopy"
