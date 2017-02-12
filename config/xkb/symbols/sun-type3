@@ -1,0 +1,7 @@
+partial modifier_keys
+xkb_symbols "swapkeys" {
+  key <ESC>	{ [ grave,	asciitilde	] };
+  key <TLDE>	{ [ Escape			] };
+  key <BKSP>	{ [ backslash,	bar		] };
+  key <BKSL>	{ [ BackSpace,	BackSpace	] };
+};
