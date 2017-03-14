@@ -4,3 +4,5 @@
 
 tmux source ~/.tmux.conf
 
+autoload -U compinit && compinit -u
+
