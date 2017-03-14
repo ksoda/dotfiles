@@ -112,9 +112,9 @@ function! s:select_candidate()
 endfunction
 
 "" Haskell
-augroup ghcmodcheck
-  autocmd!
-  autocmd BufWritePost *.hs GhcModCheckAsync
-augroup END
+" augroup ghcmodcheck
+"   autocmd!
+"   autocmd BufWritePost *.hs GhcModCheckAsync
+" augroup END
 nnoremap <leader>gt :GhcModType<CR>
 
