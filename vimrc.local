@@ -117,6 +117,8 @@ endfunction
 "   autocmd BufWritePost *.hs GhcModCheckAsync
 " augroup END
 nnoremap <leader>gt :GhcModType<CR>
+
+set tags=.tags
 let g:tagbar_type_haskell = {
     \ 'ctagsbin'  : 'hasktags',
     \ 'ctagsargs' : '-x -c -o-',
