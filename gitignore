@@ -14,3 +14,8 @@ tmp/**/*
 .idea/
 .vscode
 .tags
+
+.ensime_cache/
+.ensime
+*.log
+
