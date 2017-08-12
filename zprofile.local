@@ -5,3 +5,6 @@ export PYTHONSTARTUP="$HOME/.pythonrc"
 export GOPATH="$HOME/go"
 export PATH="$RBENVPATH/bin:$GOPATH/bin:$PATH"
 
+export EDITOR='vim'
+export VISUAL='vim'
+
