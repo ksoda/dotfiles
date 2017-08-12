@@ -1,11 +1,10 @@
 [[ -f ~/.aliases.ubuntu ]] && source ~/.aliases.ubuntu
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &&
-  source ~/.autojump/etc/profile.d/autojump.sh
+# [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &&
+#   source ~/.autojump/etc/profile.d/autojump.sh
 
 tmux source ~/.tmux.conf
 
 autoload -U compinit && compinit -u
 
-
-# OPAM configuration
-. /home/ken/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
