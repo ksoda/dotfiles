@@ -4,8 +4,11 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'bogado/file-line'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'derekwyatt/vim-scala'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-emoji'
+" Plug 'let-def/vimbufsync'
 Plug 'majutsushi/tagbar'
 Plug 'sheerun/vim-polyglot'
+" Plug 'the-lambda-church/coquille'
 
