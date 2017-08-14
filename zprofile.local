@@ -8,3 +8,5 @@ export PATH="$RBENVPATH/bin:$GOPATH/bin:$PATH"
 export EDITOR='vim'
 export VISUAL='vim'
 
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+
