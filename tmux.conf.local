@@ -1,1 +1,6 @@
 set-option -g mouse on
+unbind -t vi-copy Enter
+if-shell 'test "$(uname -s)" = Darwin' \
+  'bind-key -t vi-copy Enter copy-pipe "pbcopy"' \
+  'bind-key -t vi-copy Enter copy-pipe "xclip -selection clipboard"'
+
