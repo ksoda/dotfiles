@@ -4,4 +4,5 @@ set diff-highlight = true
 
 bind diff F ?!git commit --fixup %(commit)
 bind diff S ?!git commit --squash %(commit)
-bind generic 9 !@sh -c "echo -n %(commit) | pbcopy"
+# bind generic 9 !@sh -c "echo %(commit) | pbcopy"
+bind generic 9 !@sh -c "echo %(commit) | xclip -selection clipboard"

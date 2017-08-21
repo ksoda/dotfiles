@@ -5,6 +5,7 @@
 	st = status -sb
 	cl = clone
 	br = branch
+	df = difftool -d
 	dfc = diff --cached
 	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
 	cln = clean -di
@@ -18,9 +19,9 @@
 	show = diff-highlight | less
 	diff = diff-highlight | less
 [diff]
-	tool = code
+	tool = meld
 [merge]
-	tool = code
+	tool = meld
 [gpg]
 	program = gpg
 [user]
