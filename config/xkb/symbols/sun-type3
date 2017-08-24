@@ -3,5 +3,5 @@ xkb_symbols "swapkeys" {
   // key <ESC>	{ [ grave,	asciitilde	] };
   // key <TLDE>	{ [ Escape			] };
   key <BKSP>	{ [ backslash,	bar		] };
-  key <BKSL>	{ [ BackSpace,	BackSpace	] };
+  key <BKSL>	{ [ BackSpace,	BackSpace,	BackSpace,	BackSpace	] };
 };
