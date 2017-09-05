@@ -13,6 +13,7 @@ set smartcase
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 
+set autochdir
 
 "" Visual Settings
 "*****************************************************************************
