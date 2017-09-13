@@ -1,4 +1,5 @@
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'Raimondi/delimitMate'
 Plug 'Shougo/neocomplete'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
@@ -6,7 +7,6 @@ Plug 'bogado/file-line'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'derekwyatt/vim-scala'
 Plug 'eagletmt/neco-ghc'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-emoji'
 " Plug 'let-def/vimbufsync'
 Plug 'majutsushi/tagbar'
