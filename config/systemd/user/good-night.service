@@ -1,0 +1,9 @@
+[Unit]
+Description=Good Night service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/notify-send -i gnome-info "ねろ"
+
+[Install]
+WantedBy=default.target
