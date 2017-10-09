@@ -1,3 +1,6 @@
 ".*"
-None,       Up,     Up,     8
-None,       Down,   Down,   8
+None,    Up,     Up,     10
+None,    Down,   Down,   10
+None,    Thumb1, Alt_L|Left
+Shift_L, Up,     Left
+Shift_L, Down,   Right
