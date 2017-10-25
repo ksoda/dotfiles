@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap/my_map $DISPLAY 2> /dev/null

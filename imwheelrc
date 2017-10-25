@@ -1,6 +1,6 @@
 ".*"
-None,    Up,     Up,     10
-None,    Down,   Down,   10
-None,    Thumb1, Alt_L|Left
-Shift_L, Up,     Left
-Shift_L, Down,   Right
+  None, Up,   Button4, 10
+  None, Down, Button5, 10
+  None,    Thumb1, Alt_L|Left
+  Shift_L, Up,     Left,  5
+  Shift_L, Down,   Right, 5
