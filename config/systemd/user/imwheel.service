@@ -8,4 +8,4 @@ ExecStop=/usr/bin/pkill imwheel
 RemainAfterExit=yes
 
 [Install]
-WantedBy=wm.target
+WantedBy=default.target
