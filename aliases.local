@@ -2,8 +2,7 @@ alias -g P='| peco'
 alias d=docker
 alias feat-base='git merge-base HEAD develop'
 alias g=git
-alias ghqs='$(ghq root)/$(ghq list P)'
+alias ghqs='ghq look $(ghq list | peco)'
 alias git='noglob git'
 alias rl='bin/rails'
 unalias s
-alias trim-feat='git rebase -i $(feat-base)'
