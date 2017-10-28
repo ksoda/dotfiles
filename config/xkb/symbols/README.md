@@ -1,6 +1,12 @@
+Install
+=======
+
 ln -s /home/ken/dotfiles/config/xkb/symbols/sun-type3 /usr/share/X11/xkb/symbols/
+
 grep -n option /usr/share/X11/xkb/rules/evdev |grep symbols
+
 > append
+
 echo 'sun-type3:swapkeys\t=\t+sun-type3(swapkeys)'
 
 > /usr/share/X11/xkb/rules/evdev.lst
