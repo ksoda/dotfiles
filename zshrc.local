@@ -6,3 +6,4 @@ tmux source ~/.tmux.conf
 
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
+eval "$(kubectl completion zsh)"

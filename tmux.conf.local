@@ -1,5 +1,8 @@
 set-option -g default-shell /usr/bin/zsh
 
+set-option -g prefix C-s
+unbind-key C-b
+
 set-option -g mouse on
 
 bind-key -T copy-mode-vi C-WheelUpPane send-keys -X halfpage-up
