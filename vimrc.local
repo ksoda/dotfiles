@@ -120,7 +120,9 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 "   autocmd!
 "   autocmd BufWritePost *.hs GhcModCheckAsync
 " augroup END
-nnoremap <leader>gt :GhcModType<CR>
+nnoremap <silent> <leader>gt :GhcModType<CR>
+nnoremap <silent> <leader>gT :GhcModTypeInsert<CR>
+nnoremap <silent> <leader>gc :GhcModTypeClear<CR>
 
 let g:haskellmode_completion_ghc = 0
 
