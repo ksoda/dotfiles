@@ -1,14 +1,12 @@
 # echo '[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local' >> ~/.zprofile
 
-# HASKELLPATH="$HOME/.local"
+HASKELLPATH="$HOME/.local"
 # RBENVPATH="$HOME/.rbenv"
 # export ANDROID_HOME="$HOME/Android/Sdk"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+export PATH="$HASKELLPATH/bin:$GOPATH/bin:$PATH"
 
 export EDITOR='vim'
 export VISUAL='vim'
-
-# _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
