@@ -126,7 +126,7 @@ nnoremap <silent> <leader>gc :GhcModTypeClear<CR>
 
 let g:haskellmode_completion_ghc = 0
 
-set tags=.tags
+set tags=.tags;
 let g:tagbar_type_haskell = {
     \ 'ctagsbin'  : 'hasktags',
     \ 'ctagsargs' : '-x -c -o-',
