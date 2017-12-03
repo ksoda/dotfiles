@@ -2,10 +2,11 @@
 
 HASKELLPATH="$HOME/.local"
 # RBENVPATH="$HOME/.rbenv"
-# export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export GOPATH="$HOME/go"
-export PATH="$HASKELLPATH/bin:$GOPATH/bin:$PATH"
+
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HASKELLPATH/bin:$GOPATH/bin:$PATH"
 
 export EDITOR='vim'
 export VISUAL='vim'
