@@ -20,3 +20,5 @@ tmp/**/*
 *.log
 
 *.iml
+
+codex.tags
