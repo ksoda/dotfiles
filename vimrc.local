@@ -75,6 +75,8 @@ vnoremap <c-]> :CtrlPtjumpVisual<cr>
 nnoremap <leader>to :TagbarOpenAutoClose<CR>
 nnoremap <leader>tt :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+let g:tagbar_left = 1
+let g:tagbar_width = 25
 
 "" Emoji
 set completefunc=emoji#complete
