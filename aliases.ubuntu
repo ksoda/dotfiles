@@ -1,3 +1,4 @@
+alias code=visual-studio-code
 alias ghci='stack ghci --'
 alias ghc='stack ghc --'
 alias n-charge-lv=battery-set-normal-charge-levels
