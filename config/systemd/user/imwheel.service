@@ -3,7 +3,7 @@ Description=imwheel
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/imwheel
+ExecStart=/bin/sh -c 'xmodmap -e "pointer = 1 8 3 4 5 6 7 2 9 10"; /usr/bin/imwheel -b "4 5 6 7 0"'
 ExecStop=/usr/bin/pkill imwheel
 RemainAfterExit=yes
 
