@@ -6,8 +6,10 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export GOPATH="$HOME/go"
 export NODEPATH="$HOME/.npm-global"
+export CARGOPATH="$HOME/.cargo"
 
-export PATH="$NODEPATH/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HASKELLPATH/bin:$GOPATH/bin:$PATH"
+
+export PATH="$NODEPATH/bin:$CARGOPATH/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HASKELLPATH/bin:$GOPATH/bin:$HOME/bin:$PATH"
 
 export EDITOR='vim'
 export VISUAL='vim'
