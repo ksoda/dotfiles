@@ -1,16 +1,16 @@
 Install
 =======
 
+```sh
 ln -s /home/ken/dotfiles/config/xkb/symbols/sun-type3 /usr/share/X11/xkb/symbols/
+sudo sed -i '/^!\s*option\s*=\s*symbols/a \ \ sun-type3:swapkeys\t=\t+sun-type3(swapkeys)' /usr/share/X11/xkb/rules/evdev
+setxkbmap -layout us -option ctrl:nocaps -option sun-type3:swapkeys
+```
 
-grep -n option /usr/share/X11/xkb/rules/evdev |grep symbols
-
-> append
-
-echo 'sun-type3:swapkeys\t=\t+sun-type3(swapkeys)'
-
-> /usr/share/X11/xkb/rules/evdev.lst
-> append near ctrl:nocaps
-echo '  sun-type3:swapkeys   Swap Backslash'
+<!--
+echo 'sun-type3:swapkeys\t=\t+sun-type3(swapkeys)' \
+  | sudo tee -a /usr/share/X11/xkb/rules/evdev
+-->
 
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps','sun-type3:swapkeys']"
+
