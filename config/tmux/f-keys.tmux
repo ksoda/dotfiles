@@ -18,8 +18,12 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
+# Add F12 to the prefix list
+set -g prefix F12
+
+# Clear the slate
+
 # Byobu's Keybindings
-# Documented in: $BYOBU_PREFIX/share/doc/byobu/help.tmux.txt
 bind-key -n F2 new-window -c "#{pane_current_path}" \; rename-window "-"
 bind-key -n C-F2 display-panes \; split-window -h -c "#{pane_current_path}"
 bind-key -n S-F2 display-panes \; split-window -v -c "#{pane_current_path}"
@@ -44,3 +48,17 @@ bind-key -n M-S-Up resize-pane -U
 bind-key -n M-S-Down resize-pane -D
 bind-key -n M-S-Left resize-pane -L
 bind-key -n M-S-Right resize-pane -R
+bind-key -n F6 detach
+bind-key -n C-F6 kill-pane
+bind-key -n F7 copy-mode
+bind-key -n M-NPage copy-mode \; send-keys NPage
+bind-key -n M-PPage copy-mode \; send-keys PPage
+bind-key -n F8 command-prompt -p "(rename-window) " "rename-window '%%'"
+bind-key -n C-F8 command-prompt -p "(rename-session) " "rename-session '%%'"
+bind-key -n S-F8 next-layout
+bind-key -n M-F9 display-panes \; setw synchronize-panes
+bind-key -n M-F11 break-pane
+bind-key -n C-F11 join-pane -h -s :. -t :-1
+bind-key -n S-F11 resize-pane -Z
+bind-key -n M-IC paste-buffer
+

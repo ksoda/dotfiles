@@ -1,5 +1,4 @@
-set-option -g default-shell /usr/bin/zsh
-# set-option -g default-command "reattach-to-user-namespace -l fish"
+set-option -g default-shell "/usr/bin/fish"
 
 set-option -g prefix C-s
 unbind-key C-b

@@ -1,9 +1,0 @@
-[[ -f ~/.aliases.ubuntu ]] && source ~/.aliases.ubuntu
-# [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &&
-#   source ~/.autojump/etc/profile.d/autojump.sh
-
-tmux source ~/.tmux.conf
-
-source <(rbenv init -)
-source <(direnv hook zsh)
-source <(kubectl completion zsh)

@@ -1,3 +1,0 @@
-function md2html() {
-  pandoc $1 | lynx -stdin -assume_local_charset=UTF-8 -vikeys
-}
