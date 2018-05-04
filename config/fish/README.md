@@ -1,8 +1,8 @@
 ```sh
-fisher oh-my-fish/theme-default
-fisher oh-my-fish/plugin-peco
+fisher rafaelrinaldi/pure
+fisher fzf
 fisher oh-my-fish/plugin-sudope
 fisher 0rax/fish-bd
-fisher fishgretel/fasd
+fisher z
 fisher rbenv
 ```
