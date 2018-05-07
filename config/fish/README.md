@@ -1,8 +1,11 @@
 ```sh
-fisher rafaelrinaldi/pure
-fisher fzf
-fisher oh-my-fish/plugin-sudope
-fisher 0rax/fish-bd
-fisher z
-fisher rbenv
+fisher \
+  rafaelrinaldi/pure \
+  fzf \
+  rbenv \
+  z \
+  0rax/fish-bd \
+  laughedelic/pisces \
+  oh-my-fish/plugin-sudope \
+
 ```
