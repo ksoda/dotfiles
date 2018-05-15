@@ -1,12 +1,51 @@
 #!/usr/bin/env fish
-#
-function cd
-  if test (count $argv) -gt 0
-    builtin cd $argv
-  else
-    z -l 2> /dev/null | fzf --height "40%" | awk '{ print $2 }' | read recent
-    if [ $recent ]
-        builtin cd $recent
+
+function cd --description 'Change directory'
+    set -l MAX_DIR_HIST 25
+
+    if test (count $argv) -eq 0
+      z -l 2> /dev/null | fzf --height "40%" | awk '{ print $2 }' | read recent
+      if [ $recent ]
+          cd $recent
+          return $status
+      end
     end
-  end
+
+    if test (count $argv) -gt 1
+        printf "%s\n" (_ "Too many args for cd command")
+        return 1
+    end
+
+    # Skip history in subshells.
+    if status --is-command-substitution
+        builtin cd $argv
+        return $status
+    end
+
+    # Avoid set completions.
+    set -l previous $PWD
+
+    if test "$argv" = "-"
+        if test "$__fish_cd_direction" = "next"
+            nextd
+        else
+            prevd
+        end
+        return $status
+    end
+
+    builtin cd $argv
+    set -l cd_status $status
+
+    if test $cd_status -eq 0 -a "$PWD" != "$previous"
+        set -q dirprev
+        or set -l dirprev
+        set -q dirprev[$MAX_DIR_HIST]
+        and set -e dirprev[1]
+        set -g dirprev $dirprev $previous
+        set -e dirnext
+        set -g __fish_cd_direction prev
+    end
+
+    return $cd_status
 end
