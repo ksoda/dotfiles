@@ -1,0 +1,6 @@
+keycode 91 = Alt_R
+
+remove Control = Control_R
+keycode 104 = Control_R
+add Control = Control_R
+
