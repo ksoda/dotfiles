@@ -1,0 +1,12 @@
+#!/bin/bash
+STATUS=$(gsettings get org.gnome.desktop.a11y.keyboard mousekeys-enable) #Are mousekeys on (true or false)
+
+if [ "$STATUS" == "true" ]
+then
+  gsettings set org.gnome.desktop.a11y.keyboard mousekeys-enable false
+  notify-send -i  "/usr/share/icons/gnome/48x48/devices/keyboard.png" "Mousekeys OFF"
+else
+  gsettings set org.gnome.desktop.a11y.keyboard mousekeys-enable true
+  notify-send -i  "/usr/share/icons/gnome/48x48/devices/keyboard.png" "Mousekeys ON"
+fi
+
