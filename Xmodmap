@@ -1,6 +1,7 @@
-keycode 91 = Alt_R
-
 remove Control = Control_R
-keycode 104 = Control_R
+keycode 107 = Control_R
 add Control = Control_R
+
+keycode 51  = BackSpace
+keycode 22  = backslash bar
 
