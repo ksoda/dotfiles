@@ -6,6 +6,7 @@ alias ghqs='ghq look (ghq list | fzf)'
 alias ll='ls -al'
 alias ln='ln -v'
 alias runghc='stack runghc --'
+alias t='tig'
 
 # Linux
 alias open='xdg-open'
