@@ -1,9 +1,0 @@
-#!/bin/sh
-
-bundle exec rubocop
-x=$?
-
-npm run lint
-y=$?
-
-exit $(( x || y ))
