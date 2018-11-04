@@ -1,19 +1,6 @@
 [user]
 	email = ken.soda0@gmail.com
 	name = Ken Sonoda
-[alias]
-	st = status -sb
-	cl = clone
-	br = branch
-	df = difftool -d
-	dfc = diff --cached
-	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
-	cln = clean -di
-	feat = flow feature start
-	ri = rebase -i
-	current-branch = rev-parse --abbrev-ref HEAD
-[push]
-	default = simple
 [pager]
 	log  = diff-highlight | less
 	show = diff-highlight | less
