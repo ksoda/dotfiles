@@ -22,10 +22,8 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'bogado/file-line'
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'christoomey/vim-run-interactive'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ivalkeen/vim-ctrlp-tjump'
@@ -42,8 +40,6 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'vim-scripts/slimv.vim'
 Plug 'vim-scripts/tComment'
 
 if g:has_async
