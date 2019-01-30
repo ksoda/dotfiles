@@ -1,0 +1,8 @@
+{
+  "include": ["default"],
+  "define": {
+    "keymap": {
+      "\\": "set-input-mode-hiragana"
+    }
+  }
+}

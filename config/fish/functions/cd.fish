@@ -45,6 +45,7 @@ function cd --description 'Change directory'
         set -g dirprev $dirprev $previous
         set -e dirnext
         set -g __fish_cd_direction prev
+        ls
     end
 
     return $cd_status

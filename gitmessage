@@ -1,7 +1,20 @@
+type(scope?): subject
 
-
-# * Why was this change necessary?
-# * How does it address the problem?
-# * Are there any side effects?
+# type:
+# - build
+# - ci
+# - docs
+# - feat
+# - fix
+# - perf
+# - refactor
+# - revert
+# - style
+# - test
+#
+# subject:
+# - Why was this change necessary?
+# - How does it address the problem?
+# - Are there any side effects?
 #
 # Include a link to the ticket, if any.

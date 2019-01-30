@@ -1,12 +1,14 @@
 alias b='bundle'
+alias d='docker'
 alias dc='docker-compose'
-alias feat-base='git merge-base HEAD develop'
 alias g='git'
-alias ghqs='ghq look (ghq list | fzf)'
+alias hq='ghq get --look (ghq list | fzf)'
 alias ll='ls -al'
 alias ln='ln -v'
 alias runghc='stack runghc --'
+alias s='stack'
 alias t='tig'
+alias y='yarn'
 
 # Linux
 alias open='xdg-open'

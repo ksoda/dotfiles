@@ -1,5 +1,0 @@
-partial modifier_keys
-xkb_symbols "swapkeys" {
-	key <TAB>	{ [ Escape			] };
-	key <CAPS>	{ [ Tab,	ISO_Left_Tab	] };
-};

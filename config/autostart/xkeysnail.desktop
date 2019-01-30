@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=xkeysnail .config/xkeysnail/platform-i8042-serio-0-event-kbd.py
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=xkeysnail
+Name=xkeysnail
+Comment[en_US]=
+Comment=
