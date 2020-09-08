@@ -20,7 +20,6 @@
 	ri = rebase -i
 	st = status -sb
 [core]
-	excludesfile = ~/.gitignore
 	autocrlf = input
 	pager = delta --dark
 [merge]
