@@ -1,20 +1,13 @@
 #!/bin/bash
 # https://www.ddcutil.com/i2c_permissions/
 
-if [ $1 = 0 ]
-then
-  readonly denom=100
-else
-  readonly denom=$1
-fi
-
-case $denom in
-   1 | 2 | 4 | 100)
-     ddcutil --bus=6 setvcp 10 $((100/$denom)) &
+case $1 in
+   0 | 1 | 2 | 6 )
+     ddcutil --bus=6 setvcp 10 $((100/2**$1)) &
      wait
      ;;
    * )
-     echo "Usage: ddc-daylight 2^(0-2), 0"
+     echo "Usage: ddc-daylight 0-2, or 6"
       exit 1
       ;;
 esac
