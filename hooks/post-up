@@ -22,7 +22,7 @@ end
 '
 
 fish -c "
-fisher add 0rax/fish-bd jethrokuan/fzf jethrokuan/z laughedelic/pisces oh-my-fish/plugin-foreign-env oh-my-fish/plugin-sudope rafaelrinaldi/pure daenney/rbenv
+fisher add 0rax/fish-bd jethrokuan/fzf jethrokuan/z laughedelic/pisces oh-my-fish/plugin-foreign-env oh-my-fish/plugin-sudope rafaelrinaldi/pure daenney/rbenv evanlucas/fish-kubectl-completions
 "
 
 go get -u github.com/motemen/ghq
