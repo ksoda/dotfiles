@@ -7,7 +7,7 @@ alias k='kubectl'
 alias ll='ls -al'
 alias ln='ln -v'
 alias runghc='stack runghc --'
-alias s='stack'
+alias s='skaffold'
 alias t='tig'
 alias y='yarn'
 
