@@ -40,7 +40,7 @@ curl https://nixos.org/nix/install | sh
 
 # Interactive
 cat <<TEXT
-set -Ux fish_user_paths $HOME/go/bin $HOME/.volta/bin $HOME/.cargo/bin $HOME/.rbenv/bin/ $fish_user_paths
+set -Ux fish_user_paths $HOME/go/bin $HOME/.cargo/bin $HOME/.rbenv/bin/ $fish_user_paths
 Setup:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
