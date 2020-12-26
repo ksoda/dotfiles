@@ -37,12 +37,13 @@ curl https://get.volta.sh | bash
 volta install node
 
 curl https://nixos.org/nix/install | sh
-#  TODO: ghcup-hs
 
 # Interactive
 cat <<TEXT
 Setup:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 TEXT
 
 echo 'set -g fish_user_paths path/to/bin $fish_user_paths'
