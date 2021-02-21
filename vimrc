@@ -146,7 +146,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 set autochdir
 set dictionary=/usr/share/dict/words
 
-noremap x "_x
+vnoremap p "_dP
+vnoremap > >gv
+vnoremap < <gv
 
 "" Visual Settings
 "*****************************************************************************
