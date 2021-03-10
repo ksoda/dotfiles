@@ -22,11 +22,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
-
 filetype plugin indent on
 
 augroup vimrcEx
@@ -42,8 +37,8 @@ augroup vimrcEx
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-  autocmd BufRead,BufNewFile aliases.local,zshrc.local,*/zsh/configs/* set filetype=sh
+  autocmd BufRead,BufNewFile .{eslint,textlint}rc set filetype=json
+  autocmd BufRead,BufNewFile aliases.local set filetype=sh
   autocmd BufRead,BufNewFile gitconfig.local set filetype=gitconfig
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile vimrc.local set filetype=vim
@@ -51,32 +46,16 @@ augroup vimrcEx
   autocmd ColorScheme * highlight Pmenu guifg=gray guibg=black
 augroup END
 
-" ALE linting events
-augroup ale
-  autocmd!
-
-  if g:has_async
-    autocmd VimEnter *
-      \ set updatetime=1000 |
-      \ let g:ale_lint_on_text_changed = 0
-    autocmd CursorHold * call ale#Queue(0)
-    autocmd CursorHoldI * call ale#Queue(0)
-    autocmd InsertEnter * call ale#Queue(0)
-    autocmd InsertLeave * call ale#Queue(0)
-  else
-    echoerr "The thoughtbot dotfiles require NeoVim or Vim 8"
-  endif
-augroup END
-
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
 let g:is_posix = 1
 
 " Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set shiftround
 set expandtab
+set tabstop=2
+set shiftwidth=0
+set shiftround
+set softtabstop=-1
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -90,18 +69,14 @@ set colorcolumn=+1
 
 " Numbers
 set number
-set numberwidth=5
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
-
-" Switch between the last two files
-nnoremap <Leader><Leader> <C-^>
-
-" Treat <li> and <p> tags like the block tags they are
-let g:html_indent_tags = 'li\|p'
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -113,10 +88,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Move between linting errors
-" nnoremap ]r :ALENextWrap<CR>
-" nnoremap [r :ALEPreviousWrap<CR>
-
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
 set spellfile=$HOME/.vim-spell-en.utf-8.add
@@ -126,11 +97,6 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
-
-
-"" Basic Setup
-"*****************************************************************************"
-set softtabstop=-1
 
 "" Enable hidden buffers
 set hidden
@@ -150,17 +116,11 @@ vnoremap p "_dP
 vnoremap > >gv
 vnoremap < <gv
 
-"" Visual Settings
-"*****************************************************************************
-set relativenumber
-
+" Visual
 set completeopt=longest,menuone
-
 set mouse=a
 set ttymouse=xterm2
-
 set showtabline=2
-
 set scrolloff=5
 set cursorline
 colorscheme torte
@@ -388,49 +348,15 @@ nnoremap <leader>gp :GFiles?<CR>
 
 "" LanguageClient
 
-let delimitMate_matchpairs = "(:),[:],{:}"
-
 let g:rustfmt_autosave = 1
 
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 call camelcasemotion#CreateMotionMappings('<leader>')
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
-
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
-let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
-
-let s:opam_configuration = {}
-
-function! OpamConfOcpIndent()
-  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
-endfunction
-let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
-
-function! OpamConfOcpIndex()
-  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
-endfunction
-let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
-
-function! OpamConfMerlin()
-  let l:dir = s:opam_share_dir . "/merlin/vim"
-  execute "set rtp+=" . l:dir
-endfunction
-let s:opam_configuration['merlin'] = function('OpamConfMerlin')
-
-let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-for tool in s:opam_packages
-  " Respect package order (merlin should be after ocp-index)
-  if count(s:opam_available_tools, tool) > 0
-    call s:opam_configuration[tool]()
-  endif
-endfor
-" ## end of OPAM user-setup addition for vim / base ## keep this line
